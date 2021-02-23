@@ -13,7 +13,7 @@ class AddProduct extends Controller
             'description' =>['required'],
         ]);
 
-        Game::create([ 
+        Product::create([ 
             'name' => request('name'),
             'description' => request('description'), 
             'photo' => cloudinary()->upload(request()->file('gamepic')->getRealPath())->getSecurePath(),
