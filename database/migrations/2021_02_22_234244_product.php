@@ -15,6 +15,7 @@ class Product extends Migration
     {
         Schema::create('product', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->text("name");
             $table->text("photo")->default('');
             $table->text("description");
             $table->boolean("a");
@@ -31,6 +32,7 @@ class Product extends Migration
     }
 
     /**
+     * 
      * Reverse the migrations.
      *
      * @return void
